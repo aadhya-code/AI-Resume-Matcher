@@ -3,7 +3,7 @@ Resume <-> JD Matcher — Flask backend entry point.
 
 Run locally:
     pip install -r requirements.txt
-    export ANTHROPIC_API_KEY=sk-...      (or set in a .env file)
+    export GEMINI_API_KEY=your_api_key     (or set in a .env file)
     python app.py
 """
 import os
@@ -42,4 +42,4 @@ def create_app():
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(host="0.0.0.0", port=5001, debug=True)
