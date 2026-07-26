@@ -1,6 +1,14 @@
 # 🚀 AI Resume Matcher
 
-An AI-powered ATS Resume Analyzer that compares resumes with job descriptions using Google's Gemini AI and provides intelligent match scores, skill analysis, ATS insights, and personalized resume improvement suggestions.
+An AI-powered ATS Resume Analyzer that compares resumes with job descriptions using **Google Gemini AI**. The application generates ATS match scores, identifies strengths and missing skills, provides personalized resume improvement suggestions, and stores scan history.
+
+## 🌐 Live Demo
+
+**Frontend:**  
+https://ai-resume-matcher-fawn.vercel.app/
+
+**Backend API:**  
+https://resume-matcher-backend-ldt5.onrender.com
 
 ---
 
@@ -9,50 +17,105 @@ An AI-powered ATS Resume Analyzer that compares resumes with job descriptions us
 - 📄 Upload PDF resumes
 - 🤖 AI-powered resume analysis using Google Gemini
 - 🎯 ATS Match Score with visual progress meter
-- 💪 Resume Strengths identification
+- 📝 ATS Summary
+- 💪 Resume Strengths Analysis
 - ✅ Skills Found
-- 📚 Skills to Learn
-- 💡 Personalized resume improvement suggestions
-- 📊 Interactive analytics dashboard using Recharts
-- 📜 Scan History
-- 💾 SQLite database for storing previous analyses
-- ⚡ Fast React + Flask full-stack architecture
+- 📚 Skills To Learn
+- 💡 Personalized Resume Improvement Suggestions
+- 📊 Interactive Analytics Dashboard
+- 🥧 Skill Distribution Charts (Recharts)
+- 🕒 Scan History
+- 💾 SQLite Database Integration
+- ⚡ Fast React + Flask Architecture
+- ☁️ Deployed on Vercel & Render
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
+
 - React.js
 - Vite
 - Recharts
 - CSS3
 
 ### Backend
+
 - Flask
-- SQLAlchemy
+- Flask SQLAlchemy
 - SQLite
 - Google Gemini API
-- PyPDF2
+- PyPDF
+- Gunicorn
 
 ### AI
+
 - Google Gemini 2.5 Flash
 
 ---
 
 ## 📸 Screenshots
 
-### Home Page
+### 🏠 Home Page
 
-> *(Add screenshot after deployment)*
+![Home](screenshots/home.png)
 
-### Analysis Dashboard
+---
 
-> *(Add screenshot after deployment)*
+### 🎯 ATS Match Score
 
-### Scan History
+![ATS Score](screenshots/ats.png)
 
-> *(Add screenshot after deployment)*
+---
+
+### 💪 Resume Strengths
+
+![Resume Strengths](screenshots/strengths.png)
+
+---
+
+### 🧠 Skills Analysis
+
+![Skills](screenshots/skills.png)
+
+---
+
+### 💡 Resume Improvement Suggestions
+
+![Suggestions](screenshots/suggestion.png)
+
+---
+
+### ✨ Resume Improvements
+
+![Improvements](screenshots/improvements.png)
+
+---
+
+### 📜 Scan History
+
+![History](screenshots/history.png)
+
+---
+
+### 📊 AI Analysis Dashboard
+
+> *(Add `screenshots/dashboard.png`.)*
+
+```md
+![Dashboard](screenshots/dashboard.png)
+```
+
+---
+
+### 📜 Scan History
+
+> *(Add `screenshots/history.png`.)*
+
+```md
+![History](screenshots/history.png)
+```
 
 ---
 
@@ -64,7 +127,7 @@ An AI-powered ATS Resume Analyzer that compares resumes with job descriptions us
 - Skills Found
 - Skills To Learn
 - Resume Improvement Suggestions
-- Match Visualization Chart
+- Interactive Skill Chart
 - Previous Scan History
 
 ---
@@ -74,27 +137,35 @@ An AI-powered ATS Resume Analyzer that compares resumes with job descriptions us
 ```
 AI-Resume-Matcher
 │
-├── frontend
-│   ├── src
-│   ├── components
-│   └── api.js
-│
 ├── backend
 │   ├── app.py
 │   ├── routes.py
 │   ├── models.py
 │   ├── parser.py
 │   ├── llm_service.py
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── .env.example
 │
-└── README.md
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── App.jsx
+│   │   ├── api.js
+│   │   └── index.css
+│   ├── package.json
+│   └── vite.config.js
+│
+├── screenshots
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
 ## ⚙️ Installation
 
-### Clone the repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/aadhya-code/AI-Resume-Matcher.git
@@ -110,13 +181,27 @@ cd AI-Resume-Matcher
 cd backend
 
 python -m venv venv
+```
 
-source venv/bin/activate      # macOS/Linux
+macOS/Linux
 
+```bash
+source venv/bin/activate
+```
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-Create a `.env` file:
+Create `.env`
 
 ```env
 GEMINI_API_KEY=YOUR_GEMINI_API_KEY
@@ -144,42 +229,44 @@ npm run dev
 
 ## 🚀 How It Works
 
-1. Upload your resume in PDF format.
-2. Paste the target Job Description.
-3. The backend extracts resume text.
+1. Upload a PDF resume.
+2. Paste the Job Description.
+3. Resume text is extracted.
 4. Google Gemini compares the resume with the Job Description.
-5. The AI generates:
+5. AI generates:
    - ATS Match Score
    - ATS Summary
    - Resume Strengths
    - Skills Found
    - Missing Skills
    - Resume Suggestions
-6. Results are stored for future reference.
+6. Scan results are stored in SQLite.
 7. Users can revisit previous analyses through Scan History.
 
 ---
 
-## 📈 Future Improvements
+## 🌍 Deployment
 
-- PDF Report Download
-- Multi-resume comparison
-- Resume version tracking
-- Authentication
-- Dark mode
-- Multiple AI model support
-- Cloud database integration
-- Docker deployment
+### Frontend
+
+- **Platform:** Vercel
+
+### Backend
+
+- **Platform:** Render
 
 ---
 
-## 🌐 Live Demo
+## 🔮 Future Improvements
 
-Frontend:
-> Coming Soon
-
-Backend API:
-> Coming Soon
+- Download PDF Report
+- Authentication & User Accounts
+- Multiple Resume Comparison
+- Resume Version Tracking
+- Dark Mode
+- Docker Support
+- PostgreSQL Database
+- CI/CD Pipeline
 
 ---
 
@@ -187,8 +274,19 @@ Backend API:
 
 **Aadhya Garg**
 
-GitHub:
+GitHub:  
 https://github.com/aadhya-code
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Submit a Pull Request.
 
 ---
 
@@ -198,4 +296,6 @@ This project is licensed under the MIT License.
 
 ---
 
-### ⭐ If you found this project helpful, consider giving it a star!
+## ⭐ Support
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub!
