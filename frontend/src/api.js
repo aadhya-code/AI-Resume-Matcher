@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:5001/api";
+const BASE_URL = "https://resume-matcher-backend-ldt5.onrender.com/api";
 
 export async function submitScan({ resumeFile, jdText, jobTitle, companyName }) {
   const formData = new FormData();
